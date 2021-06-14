@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Funcionarios
+    </title>
+    <meta charset="UTF-8" />
+    <script src="js/functions.js"></script>
+</head>
+
+<body>
+    <h2>Padrões de metódos</h2>
+    <a href="javascript:callFetchWithGet()">Get</a>
+    <a href="javascript:callFetchWithPost('Sakura','37','Japão')">Post</a>
+    <a href="javascript:callFetchWithPut(1,'Ryu')">Put</a>
+    <a href="javascript:callFetchWithDelete(4)">Delete</a>
+    <p id="json"> </p>
+
+    <div style="align-items: center;">
+        <h2 style="color:blue">Insira dados do Funcionario</h2>
+        <form id="postForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" />
+
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade" />
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" />
+
+            <button type="submit" onclick="return submitPost()">Submit</button>
+        </form>
+
+        <h2 style="color: blue;">Atualizar dados Funcionario</h2>
+        <form id="putForm">
+            <label>Id:<input type="text" name="id" /></label>
+            <label>Nome:<input type="text" name="nome" /></label>
+            <button type="submit" onclick="return submitPut()">Submit</button>
+        </form>
+
+        <h2 style="color: blue;">Deletar dados Funcionarios</h2>
+        <form id="deleteForm">
+            <label>Id:<input type="text" name="id" /></label>
+            <button type="submit" onclick="return submitDelete()">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
